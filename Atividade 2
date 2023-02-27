@@ -1,0 +1,16 @@
+def is_fibonacci(n):
+    a, b = 0, 1
+    while b < n:
+        a, b = b, a + b
+    return b == n
+
+
+num = int(input("Digite um valor: "))
+fibonacci_sequence = [0, 1]
+while fibonacci_sequence[-1] < num:
+    fibonacci_sequence.append(fibonacci_sequence[-1] + fibonacci_sequence[-2])
+
+if num in fibonacci_sequence:
+    print(f"O número {num} pertence à sequência de Fibonacci.")
+else:
+    print(f"O número {num} não pertence à sequência de Fibonacci.")
